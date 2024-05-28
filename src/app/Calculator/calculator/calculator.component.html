@@ -1,0 +1,16 @@
+<div class="main">
+    <h1>BMI Calculator</h1>
+    <div class="input-section">
+        <p class="slider-output">Height : {{height}} cm</p>
+       <input type="range" class="input-slider" step="1" min="40" max="190" [(ngModel)]="height"  (ngModelChange)="bmi=calculateBMI()">
+    </div>
+    <div class="input-section">
+        <p class="slider-output">Weight : {{weight}} Kg</p>
+        <input type="range" class="input-slider" step="1" min="10" max="100" [(ngModel)]="weight"  (ngModelChange)="bmi=calculateBMI()">
+    </div>
+
+    <div class="output-section">
+        <p>Your BMI is :</p>
+        <p class="output">{{bmi | number: '1.1-1'}}</p>
+    </div>
+</div>
